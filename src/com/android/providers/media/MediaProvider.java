@@ -151,7 +151,7 @@ public class MediaProvider extends ContentProvider {
     // The lock of mMediaThumbQueue protects both mMediaThumbQueue and mCurrentThumbRequest.
     private MediaThumbRequest mCurrentThumbRequest = null;
     private PriorityQueue<MediaThumbRequest> mMediaThumbQueue =
-            new PriorityQueue<MediaThumbRequest>(MediaThumbRequest.PRIORITY_LOW,
+            new PriorityQueue<MediaThumbRequest>(MediaThumbRequest.PRIORITY_NORMAL,
             MediaThumbRequest.getComparator());
 
     private boolean mCaseInsensitivePaths;
@@ -2049,7 +2049,7 @@ public class MediaProvider extends ContentProvider {
             long magic = c.getLong(2);
 
             MediaThumbRequest req = requestMediaThumbnail(path, origUri,
-                    MediaThumbRequest.PRIORITY_LOW, magic);
+                    MediaThumbRequest.PRIORITY_HIGH, magic);
             if (req == null) {
                 return false;
             }
@@ -4360,7 +4360,7 @@ public class MediaProvider extends ContentProvider {
                                         long magic = c.getLong(2);
                                         if (magic == 0) {
                                             requestMediaThumbnail(c.getString(1), uri,
-                                                    MediaThumbRequest.PRIORITY_LOW, 0);
+                                                    MediaThumbRequest.PRIORITY_NORMAL, 0);
                                         }
                                     }
                                 } finally {
