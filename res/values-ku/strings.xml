@@ -15,7 +15,7 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-  <string name="uid_label">ڕاگه‌یێنه‌کان</string>
+  <string name="uid_label">ڕەنگاڵە</string>
   <string name="app_label">بیرگەی ڕاگەیانەکان</string>
   <string name="upgrade_msg">تازەکردنەوەی داتابەیزی ڕاگەیەنەکان</string>
   <string name="artist_label">هونەرمەند</string>
